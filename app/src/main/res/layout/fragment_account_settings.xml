@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.AccountSettingsFragment"
+            android:paddingBottom="30dp"
+            >
+
+
+        <include
+                android:id="@+id/include"
+                layout="@layout/toolbar_app"
+        />
+
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                app:layout_constraintTop_toBottomOf="@+id/include" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:elevation="2dp" android:id="@+id/cardView5">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:src="@drawable/ic_profile_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/user_profile_img"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_user_profile" android:layout_marginTop="2dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/user_name"
+                        app:layout_constraintTop_toTopOf="@+id/user_profile_img"
+                        app:layout_constraintStart_toEndOf="@+id/user_profile_img" android:layout_marginStart="10dp"
+                        android:textSize="15sp" android:fontFamily="@font/segoe_ui"
+                        android:textColor="@android:color/black" android:layout_marginTop="2dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/user_number"
+                        app:layout_constraintTop_toBottomOf="@+id/user_name"
+                        app:layout_constraintStart_toStartOf="@+id/user_name" android:textColor="@android:color/black"
+                        android:fontFamily="@font/segoe_ui" android:textSize="15sp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/user_email"
+                        app:layout_constraintTop_toBottomOf="@+id/user_number"
+                        app:layout_constraintStart_toStartOf="@+id/user_number" android:textColor="@android:color/black"
+                        android:textSize="15sp" android:fontFamily="@font/segoe_ui"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardView5" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp" android:elevation="2dp"
+                android:id="@+id/cardView6">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="@string/account_setting_fragment_text_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/favourites_heading_txt" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/segoe_ui"/>
+                <ImageView
+                        android:src="@drawable/ic_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4" android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@+id/favourites_heading_txt"
+                        app:layout_constraintStart_toStartOf="@+id/favourites_heading_txt"/>
+                <TextView
+                        android:text="@string/account_setting_fragment_text_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_txt"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4" android:layout_marginStart="8dp"
+                        android:fontFamily="@font/segoe_ui" android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        android:layout_marginBottom="2dp"/>
+                <TextView
+                        android:id="@+id/home_details_txt"
+                        android:text="No Address added."
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/home_txt"
+                        app:layout_constraintStart_toStartOf="@+id/home_txt"
+                        android:textColor="@color/light_grey_text_color"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/segoe_ui"
+                        android:maxLines="2" android:ellipsize="end"
+                        android:layout_marginEnd="6dp"
+                        app:layout_constraintEnd_toStartOf="@+id/home_options"/>
+                <ImageView
+                        android:src="@drawable/ic_dotted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_options"
+                        android:padding="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="12dp"/>
+                <ImageView
+                        android:src="@drawable/ic_office"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView7"
+                        android:layout_marginTop="28dp"
+                        app:layout_constraintTop_toBottomOf="@+id/home_details_txt"
+                        app:layout_constraintStart_toStartOf="@+id/imageView4"/>
+                <TextView
+                        android:text="@string/account_setting_fragment_text_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/office_txt"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintStart_toEndOf="@+id/imageView7"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/segoe_ui"/>
+                <TextView
+                        android:id="@+id/office_details_txt"
+                        android:text="No Address added."
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/office_txt"
+                        app:layout_constraintStart_toStartOf="@+id/office_txt" android:textSize="13sp"
+                        android:textColor="@color/light_grey_text_color"
+                        android:fontFamily="@font/segoe_ui"
+                        android:layout_marginEnd="6dp"
+                        app:layout_constraintEnd_toStartOf="@+id/office_options"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+                <ImageView
+                        android:src="@drawable/ic_dotted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:id="@+id/office_options"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="12dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="2dp" android:layout_marginTop="8dp" android:id="@+id/cardView7">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/layout_safety"
+
+            >
+
+                <TextView
+                        android:text="@string/account_setting_fragment_text_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/safety_txt" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:textSize="20sp" android:fontFamily="@font/segoe_ui"
+                        android:textColor="@android:color/black"/>
+                <TextView
+                        android:text="@string/account_setting_fragment_text_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/trusted_contact_txt" android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@+id/safety_txt"
+                        app:layout_constraintStart_toStartOf="@+id/safety_txt" android:textSize="15sp"
+                        android:textColor="@android:color/black" android:fontFamily="@font/segoe_ui"/>
+                <TextView
+                        android:text="@string/account_setting_fragment_text_7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/trusted_contat_details_txt" android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/trusted_contact_txt"
+                        app:layout_constraintStart_toStartOf="@+id/trusted_contact_txt" android:textSize="13sp"
+                        android:fontFamily="@font/segoe_ui" android:textColor="@color/light_grey_text_color"
+                        android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:ellipsize="end"
+                        android:maxLines="1"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/cardView7"
+                android:id="@+id/cardView8">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="@string/account_setting_fragment_text_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/privacy_txt" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:fontFamily="@font/segoe_ui" android:textSize="15sp"
+                        android:textColor="@android:color/black"/>
+                <TextView
+                        android:text="@string/account_setting_fragment_text_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/privacy_details_txt" android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/privacy_txt"
+                        app:layout_constraintStart_toStartOf="@+id/privacy_txt" android:textSize="13sp"
+                        android:textColor="@color/light_grey_text_color" android:fontFamily="@font/segoe_ui"
+                        android:maxLines="1" android:ellipsize="end"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@+id/cardView8" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp" android:elevation="2dp"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="@string/account_setting_fragment_text_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/security_txt" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp" android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/segoe_ui"/>
+                <TextView
+                        android:text="@string/account_setting_fragment_text_11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/security_details_txt" android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/security_txt"
+                        app:layout_constraintStart_toStartOf="@+id/security_txt" android:textSize="13sp"
+                        android:textColor="@color/light_grey_text_color" android:maxLines="1"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

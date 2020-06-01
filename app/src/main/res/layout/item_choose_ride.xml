@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/layout_ride_type"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+
+
+
+   >
+
+       <androidx.cardview.widget.CardView
+               android:id="@+id/cardview_ride"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:cardElevation="3dp"
+               android:layout_marginTop="19dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginBottom="8dp"
+               app:layout_constraintBottom_toBottomOf="parent">
+
+           <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/imgv_ride_type"
+                   android:src="@drawable/ic_motor_bike"
+
+
+           />
+
+
+       </androidx.cardview.widget.CardView>
+
+       <TextView android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/tv_label_ride_type_name"
+                 android:text="@string/tv_motor_bike"
+                 app:layout_constraintStart_toEndOf="@+id/cardview_ride"
+                 app:layout_constraintTop_toTopOf="@+id/cardview_ride"
+                 android:textSize="@dimen/text_heading"
+                 android:layout_marginStart="10dp"
+                 android:textColor="@color/textColor"
+
+
+
+       />
+       <TextView android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/tv_ride_type_price"
+                 android:text="PKR217"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 android:textSize="@dimen/text_heading"
+                 android:textColor="@color/textColor"
+                 app:layout_constraintTop_toTopOf="@+id/tv_label_ride_type_name"
+                 android:layout_marginEnd="8dp"
+
+
+
+       />
+
+       <TextView android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/tv_ride_type_desc"
+                 android:text="@string/dummy_text"
+                 app:layout_constraintStart_toEndOf="@+id/cardview_ride"
+                 app:layout_constraintTop_toBottomOf="@id/tv_label_ride_type_name"
+                 android:textSize="@dimen/text_view_size"
+                 android:layout_marginStart="10dp"
+                 android:textColor="@color/text_where_to"
+                 android:layout_marginEnd="8dp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

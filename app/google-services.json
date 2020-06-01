@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "891594927611",
+    "firebase_url": "https://gooapp-73976.firebaseio.com",
+    "project_id": "gooapp-73976",
+    "storage_bucket": "gooapp-73976.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891594927611:android:2b5b2e8b5fc238bf752f5e",
+        "android_client_info": {
+          "package_name": "com.centosquare.devatease.gooapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891594927611-a6bgmnqv32o6urprtkvpamtsnfdlh93q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.centosquare.devatease.gooapp",
+            "certificate_hash": "9570c3768b74a114f2cf19f83c14e7c1c178d983"
+          }
+        },
+        {
+          "client_id": "891594927611-qvjoin2r73uua030p3u6964700i0h6nd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.centosquare.devatease.gooapp",
+            "certificate_hash": "ea8e3bda069486ccf3d713c6fbc42ae01201a0f6"
+          }
+        },
+        {
+          "client_id": "891594927611-r2kk52a2h4p340ucc22fj9b0uijcfc85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF-d66YeOou9snSes6FkjGl-pxQ7cvhGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891594927611-r2kk52a2h4p340ucc22fj9b0uijcfc85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

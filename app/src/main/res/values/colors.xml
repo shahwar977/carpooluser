@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFDD00</color>
+    <color name="colorPrimaryDark">#FFDD00</color>
+    <color name="colorAccent">#000000</color>
+
+
+    <color name="light_grey_text_color">#858383</color>
+    <color name="delete_dialog_button_color_grey">#DFDADA</color>
+
+    <color name="textColor">#000000</color>
+    <color name="background_where_to">#C8C8C8</color>
+    <color name="text_where_to">#858383</color>
+    <color name="background_curren_loc">#E2E2E2</color>
+    <color name="background_destination_loc">#E2E2E2</color>
+    <color name="background_add_btn">#DFDADA</color>
+
+
+
+
+
+
+</resources>

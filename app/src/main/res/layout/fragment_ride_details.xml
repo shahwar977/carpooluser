@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.RideDetailsFragment"
+                                                   android:background="@color/white"
+
+>
+
+
+    <include
+            android:id="@+id/include"
+            layout="@layout/toolbar_app"
+    />
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="2dp"
+            android:id="@+id/cardView">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:src="@drawable/ic_rating_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating_star_img_5"
+                    app:layout_constraintStart_toEndOf="@+id/rating_star_img_4"
+                    app:layout_constraintTop_toTopOf="@+id/rating_star_img_1" android:layout_marginStart="2dp"/>
+            <ImageView
+                    android:src="@drawable/ic_rating_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating_star_img_3"
+                    app:layout_constraintStart_toEndOf="@+id/rating_star_img_2" app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/rating_star_img_4"
+                    app:layout_constraintTop_toTopOf="@+id/rating_star_img_1" android:layout_marginStart="2dp"/>
+            <ImageView
+                    android:src="@drawable/ic_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rider_profile_image"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Rider Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rider_name" app:layout_constraintStart_toEndOf="@+id/rider_profile_image"
+                    app:layout_constraintTop_toTopOf="@+id/rider_profile_image"
+                    app:layout_constraintBottom_toBottomOf="@+id/rider_profile_image" android:textSize="15sp"
+                    android:textColor="@android:color/black" android:fontFamily="@font/segoe_ui"
+                    android:layout_marginBottom="16dp"/>
+            <ImageView
+                    android:src="@drawable/ic_rating_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating_star_img_4"
+                    app:layout_constraintStart_toEndOf="@+id/rating_star_img_3" app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/rating_star_img_5"
+                    app:layout_constraintTop_toTopOf="@+id/rating_star_img_1" android:layout_marginStart="2dp"/>
+            <ImageView
+                    android:src="@drawable/ic_rating_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating_star_img_2"
+                    app:layout_constraintStart_toEndOf="@+id/rating_star_img_1" app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/rating_star_img_3"
+                    app:layout_constraintTop_toTopOf="@+id/rating_star_img_1" android:layout_marginStart="2dp"/>
+            <ImageView
+                    android:src="@drawable/ic_rating_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating_star_img_1"
+                    app:layout_constraintStart_toEndOf="@+id/rider_profile_image"
+                    app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/rating_star_img_2"
+                    app:layout_constraintHorizontal_chainStyle="packed" android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/rider_name"/>
+            <TextView
+                    android:text="@string/ride_details_activity_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vehicle_heading_txt"
+                    app:layout_constraintTop_toTopOf="@+id/rider_name" android:textSize="15sp"
+                    android:textColor="@android:color/black" android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:fontFamily="@font/segoe_ui"/>
+            <TextView
+                    android:text="KMA-567 Alto White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vehicle_details_txt" app:layout_constraintEnd_toEndOf="@+id/vehicle_heading_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/vehicle_heading_txt" android:textSize="10sp"
+                    android:fontFamily="@font/segoe_ui" android:layout_marginTop="2dp"
+                    android:textColor="@color/light_grey_text_color"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" android:elevation="2dp" android:id="@+id/cardView2">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:text="4 min away"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/min_away_txt" android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:textColor="@android:color/black"
+                    android:fontFamily="@font/segoe_ui" android:textSize="15sp"/>
+           <!-- <TextView
+                    android:text="Arrive by 11:25 am"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/arrive_by_txt" app:layout_constraintStart_toStartOf="@+id/min_away_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/min_away_txt" android:fontFamily="@font/segoe_ui"
+                    android:textSize="9.5sp" android:textColor="@color/light_grey_text_color"/>
+            -->
+            <ImageView
+                    android:src="@drawable/ic_phone_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contact_rider_img" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="2dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/pickup_location_cardview"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" android:elevation="2dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:src="@drawable/ic_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/pickup_location_img"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"/>
+            <TextView
+                    android:text="CentoSquare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pickup_location_address"
+                    app:layout_constraintStart_toEndOf="@+id/pickup_location_img"
+                    android:layout_marginStart="14dp"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black" android:fontFamily="@font/segoe_ui"
+                    android:layout_marginTop="2dp" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!--<ImageView-->
+                    <!--android:src="@drawable/ic_arrow"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/change_pickup_location_img"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent"-->
+
+                    <!--android:layout_marginTop="1dp"/>-->
+          <!--  <TextView
+                    android:text="@string/ride_details_activity_text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/change_pickup_location_txt" app:layout_constraintEnd_toStartOf="@+id/change_pickup_location_img"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toTopOf="parent" android:textColor="@android:color/black"
+                    android:textSize="10sp" android:fontFamily="@font/segoe_ui"/>-->
+            <TextView
+                    android:text="It is your pickup location."
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pickup_location_address_details" app:layout_constraintStart_toStartOf="@+id/pickup_location_address"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pickup_location_address" android:textSize="13sp"
+                    android:textColor="@color/light_grey_text_color" android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2" app:layout_constraintEnd_toEndOf="@+id/pickup_location_address"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/destination_location_cardview"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/pickup_location_cardview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" android:elevation="2dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/destination_vehicle_img"
+                    android:src="@drawable/ic_vehicle_destloc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"/>
+            <TextView
+                    android:text="CentoSquare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/destination_address"
+                    app:layout_constraintStart_toEndOf="@+id/destination_vehicle_img"
+                    android:layout_marginStart="14dp"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black" android:fontFamily="@font/segoe_ui"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"/>
+
+          <!--  <ImageView
+                    android:src="@drawable/ic_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/change_destination_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="1dp"/>-->
+           <!-- <TextView
+                    android:id="@+id/desination_change_tv"
+                    android:text="@string/ride_details_activity_text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/change_destination_img"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/segoe_ui"/>-->
+            <TextView
+                    android:id="@+id/destination_address_details_tv"
+                    android:text="It is your destination location."
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/destination_address"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/destination_address"
+                    android:textSize="13sp"
+                    android:textColor="@color/light_grey_text_color"
+                    android:fontFamily="@font/segoe_ui"
+                    android:maxLines="2"
+                    app:layout_constraintEnd_toEndOf="@+id/destination_address"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            app:layout_constraintTop_toBottomOf="@+id/destination_location_cardview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp" android:elevation="2dp"
+            android:id="@+id/cardView3">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:text="PKR 217"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trip_amount_txt" android:layout_marginTop="6dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:textColor="@android:color/black" android:textSize="15sp"/>
+            <TextView
+                    android:text="@string/ride_details_activity_text_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView13" app:layout_constraintStart_toStartOf="@+id/trip_amount_txt"
+                    app:layout_constraintTop_toBottomOf="@+id/trip_amount_txt"
+                    android:textSize="13sp" android:fontFamily="@font/segoe_ui"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="2dp" android:layout_marginTop="8dp" android:id="@+id/cardView4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:src="@drawable/ic_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/share_trip_img"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="8dp"
+
+            />
+            <TextView
+                    android:text="@string/ride_details_activity_text_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/share_trip_status_txt" app:layout_constraintStart_toEndOf="@+id/share_trip_img"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toTopOf="@+id/share_trip_img"
+                    app:layout_constraintBottom_toBottomOf="@+id/share_trip_img" android:textColor="@android:color/black"
+                    android:textSize="15sp" android:fontFamily="@font/segoe_ui" android:layout_marginBottom="4dp"/>
+
+
+            <ImageView
+                    android:src="@drawable/ic_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/share_arrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="6dp"/>
+            <TextView
+                    android:id="@+id/share_tv"
+                    android:text="@string/ride_details_activity_text_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="@+id/share_arrow"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/segoe_ui"
+                    app:layout_constraintTop_toTopOf="@+id/share_trip_status_txt"
+                    app:layout_constraintBottom_toBottomOf="@+id/share_trip_status_txt"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+            android:text="@string/ride_details_activity_text_6"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:id="@+id/cancel_ride_btn" android:layout_marginStart="19dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="19dp" android:layout_marginTop="16dp"
+            android:background="@android:color/black" android:textColor="@android:color/white"
+            android:fontFamily="@font/segoe_ui"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

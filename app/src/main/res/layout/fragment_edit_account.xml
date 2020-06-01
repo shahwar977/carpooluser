@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+
+    <include
+            layout="@layout/toolbar_app"
+            android:id="@+id/toolbar_edit_account"
+    />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_edit_account"
+            app:cardElevation="3dp"
+
+    >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="9.5dp"
+                android:layout_marginBottom="11dp"
+
+
+        >
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/edit_profile_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_edit_profile"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/edit_profile_img_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_profile_icon"
+                    app:civ_circle_background_color="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_profile_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_edit_profile"
+            app:cardElevation="3dp"
+            android:id="@+id/cardview_personal_info"
+            
+    >
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+            
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      android:text="@string/text_naem"
+                      android:textSize="@dimen/text_heading"
+                      android:textColor="@color/textColor"
+                      android:layout_marginStart="9.5dp"
+                      android:layout_marginTop="9.5dp"
+                      android:id="@+id/tv_label_name"
+
+            />
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/tv_label_name"
+                      android:textSize="@dimen/text_heading"
+                      android:layout_marginTop="9.5dp"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginEnd="8dp"
+                      android:hint="@string/text_naem"
+                      android:id="@+id/edtxt_name_edit_profile"
+                      app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/edtxt_name_edit_profile"
+                      android:text="@string/text_phone_no"
+                      android:textSize="@dimen/text_heading"
+                      android:textColor="@color/textColor"
+                      android:layout_marginStart="9.5dp"
+                      android:layout_marginTop="25dp"
+                      android:id="@+id/tv_label_phone_no"
+
+            />
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/tv_label_phone_no"
+                      android:textSize="@dimen/text_heading"
+                      android:layout_marginTop="9.5dp"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginEnd="8dp"
+                      android:hint="0322-2693637"
+                      android:id="@+id/edtxt_phone_no_edit_profile"
+                      app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/edtxt_phone_no_edit_profile"
+                      android:text="@string/text_email"
+                      android:textSize="@dimen/text_heading"
+                      android:textColor="@color/textColor"
+                      android:layout_marginStart="9.5dp"
+                      android:layout_marginTop="25dp"
+                      android:id="@+id/tv_label_email_add"
+
+            />
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@id/tv_label_email_add"
+                      android:textSize="@dimen/text_heading"
+                      android:layout_marginTop="9.5dp"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginEnd="8dp"
+                      android:hint="name123@gmail.com"
+                      android:id="@+id/edtxt_email_add_edit_profile"
+                      app:layout_constraintEnd_toEndOf="parent"/>
+
+            
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_personal_info"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="17dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_heading"
+            android:textColor="@android:color/white"
+            android:background="@color/text_where_to"
+            android:layout_marginStart="17dp"
+            android:id="@+id/btn_update_edit_address"
+
+
+    />
+
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 android:visibility="invisible"
+
+
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
